@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - GMU Student Feedback Hub</title>
+    <meta name="description" content="Dashboard for GMU Student Feedback System" />
+    <meta name="author" content="GMU" />
+    
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-[#046A38]">GMU Student Feedback Hub</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#046A38] text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="gmu-logo text-[#FFCC33] text-2xl">GMU</span>
+          <span class="font-semibold">Student Feedback</span>
+        </a>
+        
+        <div class="flex items-center space-x-4" id="navLinks">
+          <!-- Navigation links will be inserted by JavaScript -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="flex h-full">
+        <!-- Sidebar -->
+        <div class="w-64 dashboard-sidebar hidden md:block">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#046A38]">Dashboard</h3>
+            <div class="mt-6 space-y-1" id="sidebarLinks">
+              <a href="#profile" class="sidebar-link active">
+                <span>Profile</span>
+              </a>
+              <a href="#courses" class="sidebar-link">
+                <span>My Courses</span>
+              </a>
+              <a href="#feedback" class="sidebar-link">
+                <span>Feedback</span>
+              </a>
+              <a href="#analytics" class="sidebar-link">
+                <span>Analytics</span>
+              </a>
+              <a href="#settings" class="sidebar-link">
+                <span>Settings</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="flex-1 p-6">
+          <div id="dashboardContent">
+            <!-- Content will be inserted by JavaScript based on user role -->
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-[#046A38]">Dashboard</h2>
+              <p class="text-sm text-gray-500" id="userRoleDisplay">Loading...</p>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile" class="mb-8">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Your Profile</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="profileInfo">
+                  <!-- Profile information will be inserted by JavaScript -->
+                  <p>Loading profile information...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Courses Section -->
+            <div id="courses" class="mb-8">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">My Courses</h3>
+                <div class="overflow-x-auto" id="coursesTable">
+                  <!-- Courses table will be inserted by JavaScript -->
+                  <p>Loading courses...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedback" class="mb-8">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">Feedback</h3>
+                <div id="feedbackContent">
+                  <!-- Feedback content will be inserted by JavaScript -->
+                  <p>Loading feedback options...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#046A38] text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-[#FFCC33]">GMU Student Feedback</h3>
+            <p class="text-sm">
+              Helping improve education through student feedback and insights.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="/" class="hover:text-[#FFCC33] transition-colors">Home</a></li>
+              <li><a href="./dashboard.html" class="hover:text-[#FFCC33] transition-colors">Dashboard</a></li>
+              <li><a href="./login.html" class="hover:text-[#FFCC33] transition-colors">Login</a></li>
+              <li><a href="./register.html" class="hover:text-[#FFCC33] transition-colors">Register</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Contact</h4>
+            <address class="not-italic text-sm">
+              <p>GM University</p>
+              <p>P.B. Road, Davanagere</p>
+              <p>Davangere - 577006</p>
+              <p>Karnataka</p>
+              <p class="mt-2">Email: info@gmu.ac.in</p>
+              <p>Phone: 8296537643</p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="border-t border-white/20 mt-8 pt-4 text-center text-sm">
+          <p>&copy; <span id="currentYear"></span> GMU Student Feedback System. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if user is logged in
+        if (!localStorage.getItem('gmuAuth')) {
+          window.location.href = './login.html';
+          return;
+        }
+        
+        const user = JSON.parse(localStorage.getItem('gmuUser') || '{}');
+        
+        // Update role display
+        const userRoleDisplay = document.getElementById('userRoleDisplay');
+        if (userRoleDisplay) {
+          userRoleDisplay.textContent = `Logged in as ${user.role || 'User'}`;
+        }
+        
+        // Update profile info
+        const profileInfo = document.getElementById('profileInfo');
+        if (profileInfo) {
+          profileInfo.innerHTML = `
+            <div>
+              <p class="text-sm text-gray-500">Name</p>
+              <p class="font-medium">${user.name || 'Not provided'}</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">Email</p>
+              <p class="font-medium">${user.email || 'Not provided'}</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">Role</p>
+              <p class="font-medium">${user.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : 'Not provided'}</p>
+            </div>
+            ${user.department ? `
+            <div>
+              <p class="text-sm text-gray-500">Department</p>
+              <p class="font-medium">${user.department}</p>
+            </div>
+            ` : ''}
+            ${user.studentId ? `
+            <div>
+              <p class="text-sm text-gray-500">Student ID</p>
+              <p class="font-medium">${user.studentId}</p>
+            </div>
+            ` : ''}
+            ${user.facultyId ? `
+            <div>
+              <p class="text-sm text-gray-500">Faculty ID</p>
+              <p class="font-medium">${user.facultyId}</p>
+            </div>
+            ` : ''}
+          `;
+        }
+        
+        // Update courses table with mock data
+        const coursesTable = document.getElementById('coursesTable');
+        if (coursesTable) {
+          // Create mock courses based on user role
+          let coursesHTML = '';
+          
+          if (user.role === 'student') {
+            coursesHTML = `
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course Code</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course Name</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Instructor</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">CS101</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Introduction to Computer Science</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Dr. Smith</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">Submit Feedback</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">CS201</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Data Structures</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Dr. Johnson</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">Submit Feedback</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">CS301</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Algorithms</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Dr. Williams</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">Submit Feedback</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            `;
+          } else if (user.role === 'faculty') {
+            coursesHTML = `
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course Code</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course Name</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Students</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">CS101</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Introduction to Computer Science</td>
+                    <td class="px-6 py-4 whitespace-nowrap">32</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">View Feedback</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">CS201</td>
+                    <td class="px-6 py-4 whitespace-nowrap">Data Structures</td>
+                    <td class="px-6 py-4 whitespace-nowrap">24</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">View Feedback</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            `;
+          } else if (user.role === 'admin') {
+            coursesHTML = `
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course Count</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Faculty Count</th>
+                    <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">Computer Science</td>
+                    <td class="px-6 py-4 whitespace-nowrap">12</td>
+                    <td class="px-6 py-4 whitespace-nowrap">8</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">View Details</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">Engineering</td>
+                    <td class="px-6 py-4 whitespace-nowrap">18</td>
+                    <td class="px-6 py-4 whitespace-nowrap">14</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">View Details</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">Business</td>
+                    <td class="px-6 py-4 whitespace-nowrap">10</td>
+                    <td class="px-6 py-4 whitespace-nowrap">7</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <button class="text-[#046A38] hover:text-[#046A38]/80">View Details</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            `;
+          } else {
+            coursesHTML = `<p>No courses available</p>`;
+          }
+          
+          coursesTable.innerHTML = coursesHTML;
+        }
+        
+        // Update feedback content based on user role
+        const feedbackContent = document.getElementById('feedbackContent');
+        if (feedbackContent) {
+          let feedbackHTML = '';
+          
+          if (user.role === 'student') {
+            feedbackHTML = `
+              <p class="mb-4">You can submit feedback for your enrolled courses.</p>
+              <p class="text-sm text-gray-500">Feedback helps instructors improve their teaching methodology and course content.</p>
+              <div class="mt-4">
+                <a href="#" class="btn btn-primary">Submit New Feedback</a>
+              </div>
+            `;
+          } else if (user.role === 'faculty') {
+            feedbackHTML = `
+              <p class="mb-4">View feedback submitted by students for your courses.</p>
+              <div class="bg-gray-50 p-4 rounded-md mb-4">
+                <h4 class="font-medium mb-2">Recent Feedback Summary</h4>
+                <div class="flex items-center">
+                  <div class="w-1/4">
+                    <p class="text-3xl font-bold text-[#046A38]">4.2</p>
+                    <p class="text-xs text-gray-500">Average Rating</p>
+                  </div>
+                  <div class="w-3/4">
+                    <div class="h-2 bg-gray-200 rounded-full mb-1">
+                      <div class="h-2 bg-[#046A38] rounded-full" style="width: 85%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500">
+                      <span>Course Content</span>
+                      <span>4.3/5</span>
+                    </div>
+                    <div class="h-2 bg-gray-200 rounded-full mt-2 mb-1">
+                      <div class="h-2 bg-[#046A38] rounded-full" style="width: 80%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500">
+                      <span>Teaching Style</span>
+                      <span>4.0/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="btn btn-primary">View Detailed Reports</a>
+              </div>
+            `;
+          } else if (user.role === 'admin') {
+            feedbackHTML = `
+              <p class="mb-4">Analyze feedback across all departments and courses.</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-gray-50 p-4 rounded-md">
+                  <p class="text-3xl font-bold text-[#046A38]">4.1</p>
+                  <p class="text-sm">Overall University Rating</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md">
+                  <p class="text-3xl font-bold text-[#046A38]">3,245</p>
+                  <p class="text-sm">Feedback Submissions</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-md">
+                  <p class="text-3xl font-bold text-[#046A38]">87%</p>
+                  <p class="text-sm">Participation Rate</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="btn btn-primary">Generate Reports</a>
+              </div>
+            `;
+          } else {
+            feedbackHTML = `<p>No feedback options available</p>`;
+          }
+          
+          feedbackContent.innerHTML = feedbackHTML;
+        }
+        
+        // Handle sidebar navigation
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        sidebarLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            sidebarLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Get the target section id
+            const targetId = this.getAttribute('href').substring(1);
+            
+            // Hide all sections
+            const sections = document.querySelectorAll('#dashboardContent > div[id]');
+            sections.forEach(section => {
+              if (section.id === targetId) {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          });
+        });
+        
+        // Show first section by default
+        if (sidebarLinks.length > 0) {
+          sidebarLinks[0].click();
+        }
+      });
+    </script>
+  </body>
+</html>

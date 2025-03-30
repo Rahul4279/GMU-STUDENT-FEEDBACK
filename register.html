@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - GMU Student Feedback Hub</title>
+    <meta name="description" content="Register for GMU Student Feedback System" />
+    <meta name="author" content="GMU" />
+    
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-[#046A38]">GMU Student Feedback Hub</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#046A38] text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="gmu-logo text-[#FFCC33] text-2xl">GMU</span>
+          <span class="font-semibold">Student Feedback</span>
+        </a>
+        
+        <div class="flex items-center space-x-4" id="navLinks">
+          <!-- Navigation links will be inserted by JavaScript -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="container mx-auto py-12 px-4">
+        <div class="max-w-md mx-auto">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="px-6 py-4 border-b">
+              <h2 class="text-2xl font-bold text-center">Create an account</h2>
+              <p class="text-center text-gray-600">
+                Enter your information to register
+              </p>
+            </div>
+            
+            <form id="registerForm" class="px-6 py-4 space-y-4">
+              <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium">Full Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  class="form-input"
+                  required
+                />
+              </div>
+              
+              <div class="space-y-2">
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  class="form-input"
+                  required
+                />
+              </div>
+              
+              <div class="space-y-2">
+                <label for="password" class="block text-sm font-medium">Password</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="form-input"
+                  required
+                />
+              </div>
+              
+              <div class="space-y-2">
+                <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  class="form-input"
+                  required
+                />
+              </div>
+              
+              <div class="space-y-2">
+                <label for="role" class="block text-sm font-medium">Role</label>
+                <select
+                  id="role"
+                  name="role"
+                  class="form-input"
+                  required
+                >
+                  <option value="">Select a role</option>
+                  <option value="student">Student</option>
+                  <option value="faculty">Faculty</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+              
+              <div id="department-field" class="space-y-2" style="display: none;">
+                <label for="department" class="block text-sm font-medium">Department</label>
+                <select
+                  id="department"
+                  name="department"
+                  class="form-input"
+                >
+                  <option value="">Select department</option>
+                  <option value="computer-science">Computer Science</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="business">Business</option>
+                  <option value="arts">Arts</option>
+                  <option value="sciences">Sciences</option>
+                </select>
+              </div>
+              
+              <div id="student-fields" class="space-y-2" style="display: none;">
+                <label for="studentId" class="block text-sm font-medium">Student ID</label>
+                <input
+                  id="studentId"
+                  name="studentId"
+                  placeholder="S12345"
+                  class="form-input"
+                />
+              </div>
+              
+              <div id="faculty-fields" class="space-y-2" style="display: none;">
+                <label for="facultyId" class="block text-sm font-medium">Faculty ID</label>
+                <input
+                  id="facultyId"
+                  name="facultyId"
+                  placeholder="F12345"
+                  class="form-input"
+                />
+              </div>
+              
+              <button 
+                type="submit" 
+                class="w-full py-2 px-4 bg-[#046A38] text-white rounded-md hover:bg-[#046A38]/90"
+              >
+                Register
+              </button>
+            </form>
+            
+            <div class="px-6 py-4 bg-gray-50 text-center">
+              <div class="text-sm text-gray-600">
+                <span>Already have an account? </span>
+                <a href="./login.html" class="text-[#046A38] hover:underline">
+                  Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#046A38] text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-[#FFCC33]">GMU Student Feedback</h3>
+            <p class="text-sm">
+              Helping improve education through student feedback and insights.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="/" class="hover:text-[#FFCC33] transition-colors">Home</a></li>
+              <li><a href="./dashboard.html" class="hover:text-[#FFCC33] transition-colors">Dashboard</a></li>
+              <li><a href="./login.html" class="hover:text-[#FFCC33] transition-colors">Login</a></li>
+              <li><a href="./register.html" class="hover:text-[#FFCC33] transition-colors">Register</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Contact</h4>
+            <address class="not-italic text-sm">
+              <p>GM University</p>
+              <p>P.B. Road, Davanagere</p>
+              <p>Davangere - 577006</p>
+              <p>Karnataka</p>
+              <p class="mt-2">Email: info@gmu.ac.in</p>
+              <p>Phone: 8296537643</p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="border-t border-white/20 mt-8 pt-4 text-center text-sm">
+          <p>&copy; <span id="currentYear"></span> GMU Student Feedback System. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

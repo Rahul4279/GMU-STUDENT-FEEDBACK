@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMU Student Feedback Hub</title>
+    <meta name="description" content="GMU Student Feedback System" />
+    <meta name="author" content="GMU" />
+
+    <meta property="og:title" content="GMU Student Feedback Hub" />
+    <meta property="og:description" content="A comprehensive platform for students, faculty, and administrators to share and analyze feedback." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gmu_edu" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-[#046A38]">GMU Student Feedback Hub</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#046A38] text-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="gmu-logo text-[#FFCC33] text-2xl">GMU</span>
+          <span class="font-semibold">Student Feedback</span>
+        </a>
+        
+        <div class="flex items-center space-x-4" id="navLinks">
+          <!-- Navigation links will be inserted by JavaScript -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-b from-[#046A38] to-[#046A38]/90 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-5xl font-bold mb-6">GMU Student Feedback</h1>
+          <p class="text-xl mb-8 max-w-3xl mx-auto">
+            A comprehensive platform for students, faculty, and administrators to share and analyze feedback 
+            for courses, teaching methodologies, and university facilities.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center" id="heroButtons">
+            <!-- Buttons will be inserted by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-[#046A38]">Key Features</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+              <h3 class="text-xl font-semibold mb-4 text-[#046A38]">Role-Based Access</h3>
+              <p class="text-gray-600">
+                Different interfaces and capabilities for students, faculty, and administrators 
+                to ensure everyone has the right tools for their needs.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+              <h3 class="text-xl font-semibold mb-4 text-[#046A38]">Comprehensive Feedback</h3>
+              <p class="text-gray-600">
+                Collect detailed feedback through various question types including ratings, 
+                text responses, and multiple choice options.
+              </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+              <h3 class="text-xl font-semibold mb-4 text-[#046A38]">Powerful Analytics</h3>
+              <p class="text-gray-600">
+                Visual reports and detailed analytics help identify trends and areas for 
+                improvement in courses and teaching methods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- How It Works Section -->
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12 text-[#046A38]">How It Works</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center">
+              <div class="bg-[#046A38] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                1
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Sign Up</h3>
+              <p class="text-gray-600">
+                Create an account with your GMU credentials and select your role as student, 
+                faculty, or administrator.
+              </p>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-[#046A38] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                2
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Provide Feedback</h3>
+              <p class="text-gray-600">
+                Students can submit detailed feedback for their courses, while faculty can 
+                review feedback for their classes.
+              </p>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-[#046A38] text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                3
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Analyze Results</h3>
+              <p class="text-gray-600">
+                View comprehensive analytics and reports to identify trends and make 
+                data-driven improvements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA Section -->
+      <section class="py-16 bg-[#FFCC33]">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold mb-6 text-[#046A38]">Ready to Get Started?</h2>
+          <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-800">
+            Join the GMU Student Feedback platform and help improve the educational experience 
+            for everyone at George Mason University.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center" id="ctaButtons">
+            <!-- Buttons will be inserted by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#046A38] text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-[#FFCC33]">GMU Student Feedback</h3>
+            <p class="text-sm">
+              Helping improve education through student feedback and insights.
+            </p>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="/" class="hover:text-[#FFCC33] transition-colors">Home</a></li>
+              <li><a href="./dashboard.html" class="hover:text-[#FFCC33] transition-colors">Dashboard</a></li>
+              <li><a href="./login.html" class="hover:text-[#FFCC33] transition-colors">Login</a></li>
+              <li><a href="./register.html" class="hover:text-[#FFCC33] transition-colors">Register</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-[#FFCC33]">Contact</h4>
+            <address class="not-italic text-sm">
+              <p>GM University</p>
+              <p>P.B. Road, Davanagere</p>
+              <p>Davangere - 577006</p>
+              <p>Karnataka</p>
+              <p class="mt-2">Email: info@gmu.ac.in</p>
+              <p>Phone: 8296537643</p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="border-t border-white/20 mt-8 pt-4 text-center text-sm">
+          <p>&copy; <span id="currentYear"></span> GMU Student Feedback System. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
